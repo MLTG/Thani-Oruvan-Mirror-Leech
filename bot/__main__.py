@@ -45,8 +45,8 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/thanioruvangkls/Thani-Oruvan-Mirror-Leech")
-    buttons.buildbutton("Channel", "https://t.me/Eswarleech")
+    buttons.buildbutton("CHANNEL", "@ThaniOruvanMirrorLeech")
+    buttons.buildbutton("Channel", "https://t.me/ThaniOruvanDrive")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
@@ -56,7 +56,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
         sendMarkup(
-            'Oops! not a Authorized user.\nPlease deploy your own <b>Thani-Oruvan-Mirror-Leech</b>.',
+            'Oops! not a Authorized user.\nPlease deploy your own <b> @ThaniOruvanTD </b>.',
             context.bot,
             update,
             reply_markup,
